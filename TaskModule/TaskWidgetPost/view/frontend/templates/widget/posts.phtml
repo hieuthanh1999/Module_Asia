@@ -1,0 +1,29 @@
+<div class="maincontent">
+    <div class="title">
+        <span class="widget-title"><?= __("Title Widget: "); ?></span>
+        <span class="widget-title-val"><?= $block->getData('title_posts'); ?></span>
+    </div>
+    <div class="description">
+        <span class="widget-desc"><?= __("Description Widget: "); ?></span>
+        <span class="widget-desc-val"><?= $block->getData('textarea_posts'); ?></span>
+    </div>
+
+    <!-- <div class="title">
+        <span class="widget-title"><?//= __("Title Posts: "); ?></span>
+        <span class="widget-title-val"><?//= $block->getPost('title'); ?></span>
+    </div> -->
+    <div class="description">
+        <span class="widget-desc"><?= __("Description Posts: "); ?></span>
+        <span class="widget-desc-val"><?php  var_dump($block->getPost()); ?></span>
+    </div>
+
+    <div class="description">
+        <span class="widget-desc"><?= __("Page number: "); ?></span>
+        <span class="widget-desc-val"><?php  var_dump($block->getNumberPost($block->getData('qty_posts'))); ?></span>
+    </div>
+
+    <div class="description">
+        <span class="widget-desc"><?= __("Get Post ID: "); ?></span>
+        <span class="widget-desc-val"><?php  var_dump($block->getPostID($block->getData('select_type_list'))); ?></span>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+    <widget class="TaskModule\TaskWidgetPost\Block\Widget\Posts" id="mageplaza_helloworld_posts">
+        <label>Blog Posts</label>
+        <description>Posts</description>
+        <parameters>
+            <!-- type widget -->
+            <parameter name="title_posts" sort_order="10" required="true" visible="true" xsi:type="text">
+                <label>Title</label>
+            </parameter>
+            <!-- end type widget -->
+            <!-- type widget -->
+            <parameter name="textarea_posts"  xsi:type="block" required="true" visible="true" sort_order="20">
+                <label  translate="true">Desciption</label>
+                <block class="TaskModule\TaskWidgetPost\Block\Adminhtml\Widget\TextArea"/>
+            </parameter>
+            <!-- end type widget -->
+            <!-- type widget -->
+            <parameter name="select_type_list" xsi:type="select" visible="true" source_model="TaskModule\TaskWidgetPost\Model\Config\Source\TypeDisplayPosts" sort_order="30">
+                <label translate="true">Type Display Posts</label>
+            </parameter>
+            <!-- end type widget -->
+            <parameter name="select_posts_list" xsi:type="select" source_model="TaskModule\TaskWidgetPost\Model\Config\Source\ListSelectPosts" visible="true"  sort_order="40">
+                <label translate="true">Posts List</label>
+            </parameter>
+            <!-- end type widget -->
+              <!-- type widget -->
+            <parameter name="qty_posts" sort_order="50" visible="true" xsi:type="text">
+                <label>Qty display Post</label>
+            </parameter>
+            <!-- end type widget -->
+            <!-- type widget -->
+            <parameter name="show_silide_posts" xsi:type="select" sort_order="60" source_model="TaskModule\TaskWidgetPost\Model\Config\Source\ShowSlide" visible="true">
+                <label translate="true">Display Slide Posts</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

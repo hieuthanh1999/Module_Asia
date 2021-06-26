@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="customize" translate="label" sortOrder="10">
+            <label>Customize Hello</label>
+        </tab>
+        <section id="setting" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>taskmodule-setting</class>
+            <label>Setting</label>
+            <tab>customize</tab>
+            <resource>TaskModule_TaskCustomizeHello::Configuration</resource>
+            <group id="post" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Config Hello World</label>
+                <!-- type text -->
+                <field id="text_name" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Name</label>
+                </field>
+                <!-- end type text -->
+                <!-- end type text -->
+                <field id="textarea_disciption" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Discription</label>
+                </field>
+                <!-- end type text -->
+                <!-- end type text -->
+                <field id="logo" translate="label" type="image" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Upload Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
+                    <base_url type="media" scope_info="1">logo</base_url>
+                    <comment>
+                        <![CDATA[Allowed file types: jpeg, gif, png.]]>
+                    </comment>
+                </field>
+                <!-- end type text -->
+            </group>
+        </section>
+    </system>
+</config>
